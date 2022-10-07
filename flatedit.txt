@@ -1,0 +1,10 @@
+./DOCS/MENU.md
+../bash/DOCS/ABOUT.md
+../examples/DOCS/DOCS.md
+../bash/DOCS/START.md
+../bash/DOCS/CONTRIBUTION.md
+./DOCS/TODO.md
+./DOCS/ASCIIFlow.md
+./DOCS/TEXTIK.md
+./DOCS/KEYWORDS.md
+./DOCS/FOOT.md
