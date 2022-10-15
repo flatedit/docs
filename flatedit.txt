@@ -1,5 +1,6 @@
 ./DOCS/MENU.md
 ../bash/DOCS/ABOUT.md
+./DOCS/HOW-WE-STARTED.md
 #../examples/DOCS/DOCS.md
 ../bash/DOCS/START.md
 ../bash/DOCS/CONTRIBUTION.md

@@ -12,59 +12,33 @@
 
 
 
-
-## Documentation [<span style='font-size:20px;'>&#x270D;</span>](https://github.com/flatedit/examples/edit/main/DOCS/DOCS.md)
-
-creating documentation is not easy in hundreds of small projects, where are dpendencies
-we need some simple tool to manage the documentation from the terminal, during programming
-
-this is the frlatedit:
-+ file of projects list: readme.txt
-
-### Dependencies
-
-projects list [**readme1.txt**](readme1.txt)
-```
-./DOCS/MENU.md
-../bash/DOCS/TODO.md
-./DOCS/FOOT.md
-```
-[**readme.sh**](readme.sh)
+We started with such script
 ```bash
-./flatedit/readme.md readme1.txt
+#!/bin/bash
+## EXAMPLE:
+# sh readme.sh
+## CONFIG:
+FILE_LIST=".readme.txt"
+FILE_OUTPUT="README.md"
+CONTENT_LIST=$(cat $FILE_LIST)
+# START:
+echo "<!-- START: This file is rendered, dont' edit it, just separated parts --> " > $FILE_OUTPUT
+for content_file in $CONTENT_LIST
+do
+echo $content_file
+if [ -f $content_file ]
+then
+echo "<!-- $content_file --> " >> $FILE_OUTPUT
+cat $content_file >> $FILE_OUTPUT
+fi
+done
+echo "<!-- END: This file is rendered, dont' edit it, just separated parts --> " >> $FILE_OUTPUT
+# END
+## TEST readme.md
+cat README.md
+firefox README.md
 ```
 
-### Comments
-
-With comments not to load this file
-
-projects list [**readme2.txt**](readme2.txt)
-```
-./DOCS/MENU.md
-../bash/DOCS/TODO.md
-./DOCS/FOOT.md
-```
-[**readme.sh**](readme.sh)
-```bash
-./flatedit/readme.md readme2.txt
-```
-
-
-### Logs 
-
-Show not- & working/existing files
-
-
-projects list [**readme3.txt**](readme3.txt)
-```
-./DOCS/MENU.md
-../bash/DOCS/TODO.md
-./DOCS/FOOT.md
-```
-[**readme.sh**](readme.sh)
-```bash
-./flatedit/readme.md readme3.txt
-```
 
 ## Contribution [<span style='font-size:20px;'>&#x270D;</span>](https://github.com/flatedit/bash/edit/main/DOCS/START.md)
 
